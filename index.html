@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>请用浏览器打开</title>
+  <title>请选择跳转链接</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px 20px; }
-    h2 { color: #333; }
-    p { font-size: 16px; margin: 20px 0; }
-    #copyLink { width: 90%; padding: 10px; font-size: 16px; }
+    body { font-family: sans-serif; padding: 30px; text-align: center; background: #f9f9f9; }
+    h2 { color: #333; margin-bottom: 20px; }
+    .link-box {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 90%;
+    }
     button {
       padding: 10px 20px;
       font-size: 16px;
@@ -16,22 +22,44 @@
       color: white;
       border: none;
       border-radius: 5px;
-      margin-top: 15px;
+      margin-top: 10px;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #222;
     }
   </style>
 </head>
 <body>
-  <h2>请复制链接到浏览器打开</h2>
-  <p>本页面无法在微信中访问</p >
-  <p>请长按复制以下链接，并粘贴到手机浏览器打开：</p >
-  <input id="copyLink" value="https://static1.laiyifen.com/files/broadcast-grapher-app-api/image/9c7a5ad377324e328b81e06b1a0da36a.html?code=085608" readonly>
-  <br>
-  <button onclick="copyToClipboard()">复制链接</button>
-  <p style="margin-top:30px; font-size:13px; color:#aaa;">技术支持：安全跳转提示页</p >
+  <h2>请选择要打开的链接</h2>
+
+  <div class="link-box">
+    <div class="name">小金莲</div>
+    <input id="link1" value="https://sisxhasas798.hebjiuhong.com/index?userId=251" readonly>
+    <br>
+    <button onclick="copyLink('link1')">复制链接</button>
+  </div>
+
+  <div class="link-box">
+    <div class="name">久伴</div>
+    <input id="link2" value="https://static1.laiyifen.com/files/broadcast-grapher-app-api/image/9c7a5ad377324e328b81e06b1a0da36a.html?code=085608" readonly>
+    <br>
+    <button onclick="copyLink('link2')">复制链接</button>
+  </div>
+
+  <p style="margin-top:30px; font-size:13px; color:#aaa;">提示：请复制链接到浏览器打开，微信中无法直接访问。</p >
 
   <script>
-    function copyToClipboard() {
-      const input = document.getElementById("copyLink");
+    function copyLink(id) {
+      const input = document.getElementById(id);
       input.select();
       input.setSelectionRange(0, 99999); // for mobile
       document.execCommand("copy");
