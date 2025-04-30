@@ -1,89 +1,89 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>温馨跳转页</title>
-  <style>
-    body {
-      font-family: "微软雅黑", sans-serif;
-      padding: 30px;
-      background: linear-gradient(to bottom right, #ffe6ec, #fff0f5);
-      color: #333;
-      text-align: center;
+<!DOCTYPE html> 
+<html  lang ="zh-CN" >
+<head >
+  <meta  charset ="UTF-8"  />
+  <meta  name ="viewport"  content ="width=device-width, initial-scale=1"  />
+  <title >温馨跳转页 </title >
+  <style >
+    body  {
+      font-family : "微软雅黑" , sans-serif ;
+      padding : 30px ;
+      background : linear-gradient (to  bottom  right , #ffe6ec, #fff0f5 );
+      color : #333;
+      text-align : center ;
     }
 
-    h2 {
-      color: #d6336c;
-      margin-bottom: 30px;
-      font-size: 24px;
+    h2  {
+      color : #d6336c; 
+      margin-bottom : 30px ;
+      font-size : 24px ;
     }
 
-    .link-box {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
-      margin: 25px auto;
-      padding: 20px;
-      max-width: 90%;
+    .link-box  {
+      background : white ;
+      border-radius : 12px ;
+      box-shadow : 0 4px  12px  rgba (255, 105, 180, 0.2);
+      margin : 25px  auto ;
+      padding : 20px ;
+      max-width : 90%;
     }
 
-    .name {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 15px;
-      color: #d6336c;
+    .name  {
+      font-size : 20px ;
+      font-weight : bold ;
+      margin-bottom : 15px ;
+      color : #d6336c; 
     }
 
-    button {
-      padding: 10px 24px;
-      font-size: 16px;
+    button  {
+      padding : 10px  24px ;
+      font-size : 16px ;
       background-color: #ff69b4;
-      color: white;
+      color : white ;
       border: none;
-      border-radius: 8px;
+      border-radius : 8px ;
       cursor: pointer;
     }
 
-    button:hover {
+    button :hover {
       background-color: #e64997;
     }
 
     #counter {
       position: fixed;
-      right: 10px;
-      bottom: 10px;
-      font-size: 12px;
-      background: rgba(0, 0, 0, 0.05);
-      padding: 8px 12px;
-      border-radius: 8px;
+      right : 10px ;
+      bottom : 10px ;
+      font-size : 12px ;
+      background : rgba (0, 0, 0, 0.05);
+      padding : 8px  12px ;
+      border-radius : 8px ;
       cursor: pointer;
-      color: #999;
+      color : #999;
     }
 
     .alert-box {
-      margin-top: 40px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #d62828;
-      background: #fff3cd;
-      border: 1px solid #f5c2c7;
-      padding: 15px;
-      border-radius: 10px;
+      margin-top: 40px ;
+      font-size : 18px ;
+      font-weight : bold ;
+      color : #d62828;
+      background : #fff3cd;
+      border: 1px  solid #f5c2c7;
+      padding : 15px ;
+      border-radius : 10px ;
     }
-  </style>
-</head>
-<body>
-  <h2>请选择要打开的链接</h2>
+  </style >
+</head >
+<body >
+  <h2 >请选择要打开的链接</h2 >
 
   <div class="link-box">
     <div class="name">小金莲</div>
-    <button onclick="copyToClipboard('https://sisxhasas798.hebjiuhong.com/index?userId=251', 'xjl')">复制链接</button>
+    <button  onclick="copyToClipboard('https://sisxhasas798.hebjiuhong.com/index?userId=251', 'xjl')">复制链接</button >
   </div>
 
   <div class="link-box">
     <div class="name">久伴</div>
-    <button onclick="copyToClipboard('https://static1.laiyifen.com/files/broadcast-grapher-app-api/image/9c7a5ad377324e328b81e06b1a0da36a.html?code=085608', 'jb')">复制链接</button>
+    <button  onclick="copyToClipboard('https://static1.laiyifen.com/files/broadcast-grapher-app-api/image/9c7a5ad377324e328b81e06b1a0da36a.html?code=085608', 'jb')">复制链接</button >
   </div>
 
   <div class="alert-box">
@@ -96,11 +96,11 @@
     function copyToClipboard(link, key) {
       const input = document.createElement("input");
       input.setAttribute("value", link);
-      document.body.appendChild(input);
+      document.body .appendChild(input);
       input.select();
       input.setSelectionRange(0, 99999);
       document.execCommand("copy");
-      document.body.removeChild(input);
+      document.body .removeChild(input);
       alert("链接已复制，请粘贴到浏览器打开");
 
       // 点击计数
@@ -120,5 +120,5 @@
       }
     }
   </script>
-</body>
-</html>
+</body >
+</html >
